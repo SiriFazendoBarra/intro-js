@@ -24,6 +24,7 @@ let total = precio * cantidad
 main.style.display = "flex"
 main.style.justifyContent = "center"
 main.style.alignItems = "center"
+main.style.gap = "1rem"
 
 
 ///// section /////
@@ -36,6 +37,8 @@ section.style.display = "flex"
 section.style.flexDirection = "column"
 section.style.alignItems = "center"
 section.style.overflow = "hidden"
+section.style.boxShadow = "0px 0px 0.5rem 1px black"
+
 
 ///// aside //////
 aside.style.width = "200px"
@@ -44,11 +47,14 @@ aside.style.flexDirection = "column"
 aside.style.display = "none"
 aside.style.backgroundColor = "white"
 aside.style.padding = "2rem"
+aside.style.boxShadow = "0px 0px 0.5rem 1px black"
+aside.style.borderRadius = "1rem"
 
 ///// xIco (xmark) /////
 
 xIco.style.width = "1rem"
 xIco.style.float = "right"
+xIco.style.hover = "pointer"
 
 ///// imgCard /////
 
