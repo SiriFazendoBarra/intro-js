@@ -12,6 +12,7 @@ const pColor = document.querySelector("#pColor")
 const divColor = document.querySelector("#divColor")
 const imgCard = document.querySelector("#imgCard")
 const divColorCarrito = document.querySelector("#divColorCarrito")
+const xIco = document.querySelector("#xIco")
 
 let itemID = "Laptop Gamer AMD"
 let cantidad
@@ -28,18 +29,26 @@ main.style.alignItems = "center"
 ///// section /////
 section.style.backgroundColor = "green"
 section.style.minWidth = "400px"
-section.style.paddingBlock = "2rem"
+section.style.paddingBottom = "2rem"
 section.style.borderRadius = "1rem"
 section.style.border = "1px solid green"
 section.style.display = "flex"
 section.style.flexDirection = "column"
 section.style.alignItems = "center"
+section.style.overflow = "hidden"
 
 ///// aside //////
 aside.style.width = "200px"
+aside.style.display = "flex"
+aside.style.flexDirection = "column"
 aside.style.display = "none"
 aside.style.backgroundColor = "white"
 aside.style.padding = "2rem"
+
+///// xIco (xmark) /////
+
+xIco.style.width = "1rem"
+xIco.style.float = "right"
 
 ///// imgCard /////
 
@@ -106,6 +115,13 @@ button.style.borderRadius = "8px"
 
 
 //// EVENTOS ///
+
+///////////// xIco (xmark) /////////////
+
+xIco.addEventListener("click", ()=>{
+    aside.style.display = "none"
+})
+
 
 inputColor.addEventListener("input", () => {
 
