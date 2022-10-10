@@ -11,6 +11,7 @@ const pCantidad = document.querySelector("#pCantidad")
 const pColor = document.querySelector("#pColor")
 const divColor = document.querySelector("#divColor")
 const imgCard = document.querySelector("#imgCard")
+const divColorCarrito = document.querySelector("#divColorCarrito")
 
 let itemID = "Laptop Gamer AMD"
 let cantidad
@@ -73,13 +74,19 @@ inputColor.style.marginBlock = "1rem"
 
 ///// pPrecio /////
 
-pPrecio.textContent = `Precio: ${precio}`
+pPrecio.textContent = `Precio: $${precio}`
+pPrecio.style.fontSize = "24px"
+pPrecio.style.color = "white"
 
 ///// pTotal /////
 
 
 ///// pCantidad /////
 
+//// divColorCarrito ////
+
+divColorCarrito.style.display = "flex"
+divColorCarrito.style.alignItems = "center"
 
 /////pColor//////
 pColor.textContent = `Color:`
@@ -89,11 +96,14 @@ pColor.textContent = `Color:`
 divColor.style.borderRadius = "15px"
 divColor.style.width = "30px"
 divColor.style.height = "30px"
+divColor.style.marginInline = "1rem"
 
 
 //// button /////
 button.style.width = "200px"
 button.style.padding = "1rem"
+button.style.borderRadius = "8px"
+
 
 //// EVENTOS ///
 
@@ -103,10 +113,11 @@ inputColor.addEventListener("input", () => {
 })
 
 button.addEventListener("click", () => {
+    divColor.style.backgroundColor = inputColor.value
     aside.style.display = "block"
     cantidad = inputCantidad.value
     pCantidad.textContent = `Cantidad: ${cantidad}`
     total = precio * cantidad
-    pTotal.textContent = `Total: ${total}`
+    pTotal.textContent = `Total: $${total}`
 })
 
